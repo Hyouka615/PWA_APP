@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 温湿度监控与LED控制</title>
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; }
+        .container { max-width: 800px; margin: auto; }
+        .card { display: inline-block; width: 45%; padding: 20px; border-radius: 10px; 
+                box-shadow: 2px 2px 10px rgba(0,0,0,0.2); margin: 10px; background-color: white; }
+        .temp { color: red; font-size: 28px; }
+        .hum { color: blue; font-size: 28px; }
+        canvas { max-width: 100%; margin-top: 20px; }
+        .led-control { margin-top: 20px; }
+        button { padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>ESP32 温湿度监控与LED控制</h1>
+    <div class="container">
+        <div class="card">
+            <h2>🌡 当前温度</h2>
+            <p class="temp">-- °C</p>
+        </div>
+        <div class="card">
+            <h2>💧 当前湿度</h2>
+            <p class="hum">-- %</p>
+        </div>
+
+        <h2>🌡 温度变化趋势</h2>
+        <canvas id="tempChart"></canvas>
+
+        <h2>💧 湿度变化趋势</h2>
+        <canvas id="humChart"></canvas>
+
+        <div class="led-control">
+            <h2>💡 LED 控制</h2>
+            <button id="ledButton" onclick="toggleLED()">打开 LED</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

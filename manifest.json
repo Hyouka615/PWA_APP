@@ -1,0 +1,17 @@
+{
+    "name": "ESP32 温湿度监控与LED控制",
+    "short_name": "温湿度监控",
+    "description": "通过 PWA 实时获取温湿度数据并控制 LED",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+      {
+        "src": "icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+  
